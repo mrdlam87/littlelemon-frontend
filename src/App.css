@@ -1,0 +1,133 @@
+/*  General Components  */
+.container {
+  max-width: 85rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/*  Text Styles  */
+.title-display {
+  font-family: "Markazi Text", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 6.4rem;
+}
+
+.title-subtitle {
+  font-family: "Markazi Text", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+.title-section {
+  font-family: "Karla", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+.title-card {
+  font-family: "Karla", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.text-lead {
+  font-family: "Karla", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.text-categories {
+  font-family: "Karla", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.6rem;
+}
+
+.text-paragraph {
+  font-family: "Karla", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.text-highlight {
+  font-family: "Karla", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+/*  Colour Styles  */
+.primary1 {
+  color: #495e57;
+}
+
+.primary2 {
+  color: #f4ce14;
+}
+
+.secondary1 {
+  color: #ee9972;
+}
+
+.secondary2 {
+  color: #fbdabb;
+}
+
+.secondary3 {
+  color: #edefee;
+}
+
+.secondary4 {
+  color: #333333;
+}
+
+.background-primary1 {
+  background-color: #495e57;
+}
+
+.background-primary2 {
+  background-color: #f4ce14;
+}
+
+.background-secondary1 {
+  background-color: #ee9972;
+}
+
+.background-secondary2 {
+  background-color: #fbdabb;
+}
+
+.background-secondary3 {
+  background-color: #edefee;
+}
+
+.background-secondary4 {
+  background-color: #333333;
+}
+
+/*  Grid Styles  */
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}

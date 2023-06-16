@@ -1,0 +1,36 @@
+.footer {
+  padding: 5rem 0;
+  background-color: #fdf4ee;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 1.4rem;
+
+    li a {
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+
+  .div-icons {
+    margin-top: 1.2rem;
+    display: flex;
+    gap: 2rem;
+  }
+
+  .icon {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .grid {
+    column-gap: 4rem;
+  }
+}

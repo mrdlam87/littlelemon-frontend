@@ -1,0 +1,35 @@
+.div-hero {
+  padding: 5rem 0;
+
+  .text-subtitle {
+    position: relative;
+    top: -2rem;
+  }
+
+  .text-summary {
+    width: 80%;
+  }
+
+  .btn-reserve {
+    margin-top: 3rem;
+  }
+
+  .div-right {
+    position: relative;
+  }
+
+  .div-img {
+    position: absolute;
+    right: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 150%;
+    width: 80%;
+
+    img {
+      width: 100%;
+      position: relative;
+      top: -3rem;
+    }
+  }
+}

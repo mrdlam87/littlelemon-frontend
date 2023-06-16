@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "fullname": "Juan Carlos",
+    "username": "Carlos",
+    "imageUrl": "./images/person_1.png",
+    "review": "“We had such a great time celebrating my grandmothers bitthday!”"
+  },
+  {
+    "id": 2,
+    "fullname": "Jon Do",
+    "username": "Johnny_Utah",
+    "imageUrl": "./images/person_2.png",
+    "review": "“Seriously cannot stop thinking about the Turkish Mac n’ Cheese!!”"
+  },
+  {
+    "id": 3,
+    "fullname": "Amanda Smith",
+    "username": "Smith_75",
+    "imageUrl": "./images/person_3.png",
+    "review": "“Best Feta Salad in town. Flawless everytime!”"
+  },
+  {
+    "id": 4,
+    "fullname": "Sara Gonzales",
+    "username": "Sara_G",
+    "imageUrl": "./images/person_4.png",
+    "review": "“Such a chilled out atmosphere - love it!”"
+  }
+]

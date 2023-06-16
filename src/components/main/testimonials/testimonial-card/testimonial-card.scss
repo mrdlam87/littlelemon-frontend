@@ -1,0 +1,43 @@
+.testimonial-card {
+  font-family: "Karla", sans-serif;
+  font-size: 1.4rem;
+
+  .testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+
+    .div-img {
+      border-radius: 50%;
+      overflow: hidden;
+      height: 6rem;
+      width: 6rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .div-names {
+      p {
+        font-weight: bold;
+      }
+
+      p:last-child {
+        color: #6e6f6e;
+      }
+    }
+  }
+
+  .div-stars {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+
+    img {
+      height: 1.6rem;
+      width: 1.6rem;
+    }
+  }
+}

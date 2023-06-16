@@ -1,7 +1,9 @@
 import logo from "../../assets/images/Logo.svg";
+import "./nav.scss";
+
 const Nav = () => {
   return (
-    <nav>
+    <nav className="nav-main">
       <img src={logo} alt="logo" />
       <ul>
         <li>
