@@ -1,0 +1,38 @@
+.button-group {
+  width: 100%;
+  display: flex;
+
+  label {
+    flex: 1;
+  }
+
+  .radio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: inherit;
+    border: 1.5px solid #eee;
+    color: #eee;
+    width: 100%;
+    height: 100%;
+    font-family: "Karla", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+  }
+
+  .radio:hover {
+    background-color: #eee;
+    color: #1a202c;
+  }
+}
+
+.button-group label:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.button-group label:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}

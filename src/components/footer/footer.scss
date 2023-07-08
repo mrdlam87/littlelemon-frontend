@@ -3,7 +3,7 @@
   background-color: #fdf4ee;
 
   h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
 
   ul {
@@ -19,18 +19,54 @@
     }
   }
 
-  .div-icons {
-    margin-top: 1.2rem;
+  .div-social {
     display: flex;
-    gap: 2rem;
-  }
+    flex-direction: column;
 
-  .icon {
-    width: 2.4rem;
-    height: 2.4rem;
+    img {
+      width: 14.8rem;
+      height: 4rem;
+      // margin-bottom: 0.6rem;
+    }
+
+    .div-icons {
+      margin-top: 1.2rem;
+      display: flex;
+      gap: 2rem;
+    }
+
+    .icon {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    .copyright {
+      margin-top: auto;
+      font-size: 1.2rem;
+    }
   }
 
   .grid {
     column-gap: 4rem;
+  }
+}
+
+@media (max-width: 34em) {
+  .footer {
+    .grid {
+      row-gap: 3.6rem;
+    }
+
+    .grid--4-cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .div-social {
+      grid-row: 2;
+    }
+
+    .div-contact {
+      grid-row: 2;
+    }
   }
 }

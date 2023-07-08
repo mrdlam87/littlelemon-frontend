@@ -1,16 +1,15 @@
-import About from "./about/about";
-import Hero from "./hero/hero";
-import Meals from "./meals/meals";
-import Testimonials from "./testimonials/testimonials";
+import "./Main.scss";
+import { Outlet } from "react-router-dom";
+import Footer from "../footer/Footer";
+import Header from "../header/Header";
 
 const Main = () => {
   return (
-    <main>
-      <Hero />
-      <Meals />
-      <Testimonials />
-      <About />
-    </main>
+    <div className="div-main">
+      <Header />
+      <Outlet />
+      <Footer />
+    </div>
   );
 };
 

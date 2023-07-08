@@ -1,30 +1,27 @@
-import logo from "../../assets/images/Logo.svg";
-import "./nav.scss";
+import { Link } from "react-router-dom";
+import "./Nav.scss";
 
-const Nav = () => {
+const Nav = ({ onNavigate }) => {
   return (
     <nav className="nav-main">
-      <img src={logo} alt="logo" />
-      <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Menu</a>
-        </li>
-        <li>
-          <a href="#">Reservations</a>
-        </li>
-        <li>
-          <a href="#">Order Online</a>
-        </li>
-        <li>
-          <a href="#">Login</a>
-        </li>
-      </ul>
+      <Link to="/" className="secondary4" onClick={onNavigate}>
+        Home
+      </Link>
+      <Link to="/" className="secondary4" onClick={onNavigate}>
+        About
+      </Link>
+      <Link to="/" className="secondary4" onClick={onNavigate}>
+        Menu
+      </Link>
+      <Link to="/reservations" className="secondary4" onClick={onNavigate}>
+        Reservations
+      </Link>
+      <Link to="/" className="secondary4" onClick={onNavigate}>
+        Order Online
+      </Link>
+      <Link to="/" className="secondary4" onClick={onNavigate}>
+        Login
+      </Link>
     </nav>
   );
 };

@@ -1,0 +1,47 @@
+.div-hero {
+  padding: 5rem 0;
+
+  .text-subtitle {
+    position: relative;
+    top: -2rem;
+  }
+
+  .text-summary {
+    width: 80%;
+  }
+
+  .btn-reserve {
+    margin-top: 3rem;
+  }
+
+  .div-right {
+    position: relative;
+  }
+
+  .div-img {
+    position: absolute;
+    right: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 140%;
+    width: 80%;
+    box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.1);
+    background-image: url("../../../assets/images/restauranfood.jpg");
+    background-size: cover;
+    background-position: top;
+
+    img {
+      width: 100%;
+      position: relative;
+      top: -3rem;
+    }
+  }
+}
+
+@media (max-width: 34em) {
+  .div-hero {
+    .div-img {
+      height: 100%;
+    }
+  }
+}

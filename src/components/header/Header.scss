@@ -1,0 +1,47 @@
+.div-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.6rem;
+  height: 6rem;
+
+  img {
+    width: 16rem;
+    height: 5.3rem;
+  }
+}
+
+.btn-nav {
+  border: none;
+  background: none;
+  display: none;
+  z-index: 1000;
+  cursor: pointer;
+
+  .btn-icon {
+    height: 4.8rem;
+    width: 4.8rem;
+    color: #333;
+  }
+
+  .btn-icon[name="close"] {
+    display: none;
+  }
+}
+
+@media (max-width: 31em) {
+  header {
+    .btn-nav {
+      display: block;
+    }
+  }
+
+  .nav-open .btn-icon[name="close"] {
+    display: block;
+  }
+
+  .nav-open .btn-icon[name="menu"] {
+    display: none;
+  }
+}

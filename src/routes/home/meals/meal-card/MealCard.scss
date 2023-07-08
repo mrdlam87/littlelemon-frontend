@@ -1,0 +1,45 @@
+.meal-card {
+  overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.1);
+
+  .div-img {
+    height: 17rem;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+  }
+
+  .meal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    height: 100%;
+
+    .content-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .meal-title {
+      font-family: "Markazi Text", serif;
+      font-size: 2.4rem;
+      font-weight: 500;
+    }
+
+    .meal-price {
+      font-family: "Karla", sans-serif;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    .meal-order {
+      font-family: "Karla", sans-serif;
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+  }
+}

@@ -12,3 +12,14 @@ html {
   /* DOES NOT WORK ON SAFARI */
   /* scroll-behavior: smooth; */
 }
+
+body {
+  overflow-x: hidden;
+}
+
+/* html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+} */

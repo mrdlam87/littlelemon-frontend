@@ -1,0 +1,24 @@
+.div-testimonials {
+  padding: 10rem 0;
+
+  .text-lead {
+    position: relative;
+    top: -1rem;
+  }
+
+  .testimonials {
+    margin-top: 5rem;
+    column-gap: 2rem;
+  }
+
+  /* BELOW 544 PIXELS (Phones) */
+  @media (max-width: 34em) {
+    .grid--4-cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid {
+      row-gap: 3.6rem;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.div-about {
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  column-gap: 3rem;
+
+  h2 {
+    position: relative;
+    top: -2rem;
+  }
+
+  .div-text {
+    width: 90%;
+
+    p {
+      font-family: "Karla", sans-serif;
+      font-size: 2rem;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+  }
+
+  .div-collage {
+    position: relative;
+  }
+
+  .div-img {
+    position: absolute;
+    right: 0;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 60%;
+    width: 75%;
+    border: 2px solid #fff;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  // .img1 {
+  //   background-image: url("../../../assets/images/Mario and Adrian b.jpg");
+  // }
+
+  // .img2 {
+  //   background-image: url("../../../assets/images/restaurant.jpg");
+  // }
+
+  .div-img:last-child {
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 31em) {
+  .div-about {
+    .div-collage {
+      height: 150%;
+    }
+
+    .div-img {
+      width: 60%;
+    }
+
+    .div-img:first-child {
+      position: relative;
+      right: 0;
+      top: 0;
+      margin-left: auto;
+    }
+
+    .div-img:last-child {
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .div-about.grid--2-cols {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+  }
+}

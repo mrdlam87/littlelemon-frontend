@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Greek Salad",
     "price": 12.99,
-    "imageUrl": "./images/greek salad.jpg",
+    "imageUrl": "./images/greeksalad.jpg",
     "description": "The famous Greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons."
   },
   {
@@ -17,7 +17,7 @@
     "id": 3,
     "title": "Lemon Dessert",
     "price": 5.0,
-    "imageUrl": "./images/lemon dessert.jpg",
+    "imageUrl": "./images/lemondessert.jpg",
     "description": "This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined."
   }
 ]

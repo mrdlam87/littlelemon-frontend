@@ -1,0 +1,30 @@
+.div-meals {
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+
+  .div-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .meal-cards {
+    margin-top: 3rem;
+    column-gap: 3rem;
+    grid-auto-rows: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 31em) {
+  .div-meals {
+    margin-bottom: 10rem;
+    .div-heading {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .grid--3-cols {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
