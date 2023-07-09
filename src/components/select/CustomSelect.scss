@@ -1,34 +1,45 @@
-.select-input-group {
-  align-items: center;
+.div-select {
+  .select-input-group {
+    align-items: center;
 
-  .select {
-    padding-left: 4.8rem;
+    .select {
+      padding-left: 4.8rem;
+    }
+
+    .input-left {
+      top: auto;
+      height: auto;
+      width: auto;
+    }
+
+    .icon {
+      margin-left: 1.2rem;
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+
+    .select {
+      background-color: #eee !important;
+      border-radius: 8px;
+      font-family: "Karla", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 2rem;
+      height: 5.6rem;
+      // padding: 0.6rem;
+    }
+
+    .select:focus {
+      border-color: #ee9972;
+    }
   }
 
-  .input-left {
-    top: auto;
-    height: auto;
-    width: auto;
-  }
-
-  .icon {
-    margin-left: 1.2rem;
-    width: 3.2rem;
-    height: 3.2rem;
-  }
-
-  .select {
-    background-color: #eee !important;
-    border-radius: 8px;
+  .error-message {
+    position: absolute;
     font-family: "Karla", sans-serif;
     font-style: normal;
-    font-weight: 400;
-    font-size: 2rem;
-    height: 5.6rem;
-    // padding: 0.6rem;
-  }
-
-  .select:focus {
-    border-color: #ee9972;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #fc8181;
   }
 }

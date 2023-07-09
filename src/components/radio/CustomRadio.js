@@ -24,7 +24,7 @@ const Radio = (props) => {
   );
 };
 
-const CustomRadio = ({ name, options, value, onChange }) => {
+const CustomRadio = ({ name, options, value, onChange, onBlur }) => {
   const { getRootProps, getRadioProps } = useRadioGroup({
     name,
     defaultValue: value,

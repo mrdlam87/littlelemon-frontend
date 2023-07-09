@@ -29,17 +29,5 @@
     width: 80%;
     min-height: 100vh;
     padding: 5rem 0;
-
-    .div-form {
-      display: flex;
-      flex-direction: column;
-      gap: 4rem;
-
-      .div-input-group {
-        display: grid;
-        gap: 2.4rem;
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
   }
 }

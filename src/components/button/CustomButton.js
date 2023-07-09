@@ -1,8 +1,12 @@
 import "./CustomButton.scss";
 
-const CustomButton = ({ children, onClick, className }) => {
+const CustomButton = ({ children, type, onClick, className }) => {
   return (
-    <button className={`btn secondary4 ${className}`} onClick={onClick}>
+    <button
+      type={type || "button"}
+      className={`btn secondary4 ${className}`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );
