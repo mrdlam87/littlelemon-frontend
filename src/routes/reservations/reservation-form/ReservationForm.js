@@ -1,4 +1,7 @@
 import "./ReservationForm.scss";
+import { useContext } from "react";
+import { ReservationContext } from "../../../contexts/reservation.context";
+import { Formik } from "formik";
 import {
   IoCalendar,
   IoCall,
@@ -8,16 +11,15 @@ import {
   IoPerson,
   IoTime,
 } from "react-icons/io5";
-import { Divider } from "@chakra-ui/react";
+import { Divider, useToast } from "@chakra-ui/react";
 import { CustomInput } from "../../../components/input/CustomInput";
 import CustomButton from "../../../components/button/CustomButton";
 import CustomRadio from "../../../components/radio/CustomRadio";
 import CustomSelect from "../../../components/select/CustomSelect";
-import { Formik } from "formik";
+import CustomToast from "../../../components/toast/CustomToast";
 
 const ReservationForm = () => {
   const seatingOptions = ["Indoor", "Outdoor"];
-  const timeOptions = ["17:00", "18:00", "19:00", "20:00", "21:00", "22:00"];
   const guestsOptions = Array.from({ length: 10 }, (_, i) => i + 1).map(
     (n) => `${n} pax`
   );
@@ -31,6 +33,12 @@ const ReservationForm = () => {
     guests: "",
     occasion: "",
   };
+  const {
+    availableTimes,
+    fetchAvailableTimes,
+    submitReservation,
+    isSubmitting,
+  } = useContext(ReservationContext);
 
   const validate = (values) => {
     const errors = {};
@@ -70,8 +78,39 @@ const ReservationForm = () => {
     return errors;
   };
 
-  const onSubmit = (values) => {
-    console.log(values);
+  const toast = useToast();
+
+  const onSubmit = async (values, { resetForm }) => {
+    try {
+      await submitReservation(values);
+      await resetForm();
+      toast({
+        position: "top",
+        duration: 5000,
+        isClosable: true,
+        render: ({ onClose }) => (
+          <CustomToast
+            title="Reservation complete!"
+            description="We've made your reservation at Little Lemon."
+            onClose={onClose}
+          />
+        ),
+      });
+    } catch (error) {
+      toast({
+        position: "top",
+        duration: 5000,
+        isClosable: true,
+        render: ({ onClose }) => (
+          <CustomToast
+            title="Reservation incomplete!"
+            description="We could not make your reseveration."
+            status="error"
+            onClose={onClose}
+          />
+        ),
+      });
+    }
   };
 
   return (
@@ -87,13 +126,19 @@ const ReservationForm = () => {
               name="date"
               type="date"
               icon={<IoCalendar className="icon primary1" />}
-              placeholder="Select time"
+              placeholder="Select date"
+              onChange={(e) => {
+                handleChange(e);
+                fetchAvailableTimes(new Date(e.target.value));
+              }}
             />
             <CustomSelect
               name="time"
-              options={timeOptions}
+              options={availableTimes}
               icon={<IoTime className="icon primary1" />}
-              placeholder="Select time"
+              placeholder={
+                availableTimes.length > 0 ? "Select time" : "Select date first"
+              }
             />
           </div>
           <div className="div-input-group">
@@ -137,7 +182,13 @@ const ReservationForm = () => {
             placeholder="Occasion (optional)"
           />
           <div>
-            <CustomButton type="submit">Reserve a Table</CustomButton>
+            <CustomButton
+              type="submit"
+              disabled={isSubmitting}
+              isLoading={isSubmitting}
+            >
+              Reserve a Table
+            </CustomButton>
           </div>
         </form>
       )}

@@ -2,7 +2,7 @@ import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
 import "./CustomInput.scss";
 import { ErrorMessage, Field } from "formik";
 
-export const CustomInput = ({ name, type, placeholder, icon }) => {
+export const CustomInput = ({ name, type, placeholder, icon, onChange }) => {
   return (
     <div className="div-input">
       <InputGroup className="input-group">
@@ -20,6 +20,7 @@ export const CustomInput = ({ name, type, placeholder, icon }) => {
               className="input"
               variant="filled"
               errorBorderColor="red.400"
+              onChange={onChange || field.onChange}
             />
           )}
         </Field>
