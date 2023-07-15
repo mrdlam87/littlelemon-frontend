@@ -18,7 +18,7 @@ import CustomRadio from "../../../components/radio/CustomRadio";
 import CustomSelect from "../../../components/select/CustomSelect";
 import CustomToast from "../../../components/toast/CustomToast";
 
-const ReservationForm = () => {
+const ReservationForm = ({ onSuccess }) => {
   const seatingOptions = ["Indoor", "Outdoor"];
   const guestsOptions = Array.from({ length: 10 }, (_, i) => i + 1).map(
     (n) => `${n} pax`
@@ -80,36 +80,31 @@ const ReservationForm = () => {
 
   const toast = useToast();
 
+  const failToast = () => {
+    toast({
+      position: "top",
+      duration: 5000,
+      isClosable: true,
+      render: ({ onClose }) => (
+        <CustomToast
+          title="Reservation incomplete!"
+          description="We could not make your reseveration."
+          status="error"
+          onClose={onClose}
+        />
+      ),
+    });
+  };
+
   const onSubmit = async (values, { resetForm }) => {
     try {
-      await submitReservation(values);
+      const result = await submitReservation(values);
       await resetForm();
-      toast({
-        position: "top",
-        duration: 5000,
-        isClosable: true,
-        render: ({ onClose }) => (
-          <CustomToast
-            title="Reservation complete!"
-            description="We've made your reservation at Little Lemon."
-            onClose={onClose}
-          />
-        ),
-      });
+      onSuccess(values);
+
+      !result && failToast();
     } catch (error) {
-      toast({
-        position: "top",
-        duration: 5000,
-        isClosable: true,
-        render: ({ onClose }) => (
-          <CustomToast
-            title="Reservation incomplete!"
-            description="We could not make your reseveration."
-            status="error"
-            onClose={onClose}
-          />
-        ),
-      });
+      failToast();
     }
   };
 
