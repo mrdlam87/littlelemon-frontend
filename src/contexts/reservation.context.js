@@ -1,6 +1,33 @@
-import { createContext, useState } from "react";
+import { createContext, useReducer } from "react";
 import { fetchAPI, submitAPI } from "../utils/reservations";
 import { getDateString } from "../utils/date";
+
+const reservationActions = {
+  setAvailableTimes: "SET_AVAILABLE_TIMES",
+  setReservationsMap: "SET_RESERVATIONS_MAP",
+  setIsSubmitting: "SET_IS_SUBMITTING",
+};
+
+const initialState = {
+  availableTimes: [],
+  reservationsMap: {},
+  isSubmitting: false,
+};
+
+const reservationsReducer = (state, action) => {
+  const { type, payload } = action;
+
+  switch (type) {
+    case reservationActions.setAvailableTimes:
+      return { ...state, availableTimes: payload };
+    case reservationActions.setReservationsMap:
+      return { ...state, reservationsMap: payload };
+    case reservationActions.setIsSubmitting:
+      return { ...state, isSubmitting: payload };
+    default:
+      throw new Error(`Unhandled type ${type} in cartReducer`);
+  }
+};
 
 export const ReservationContext = createContext({
   availableTimes: [],
@@ -10,9 +37,8 @@ export const ReservationContext = createContext({
 });
 
 export const ReservationProvider = ({ children }) => {
-  const [availableTimes, setAvailableTimes] = useState([]);
-  const [reservationsMap, setReservationsMap] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [{ availableTimes, reservationsMap, isSubmitting }, dispatch] =
+    useReducer(reservationsReducer, initialState);
 
   const fetchAvailableTimes = (date) => {
     const result = fetchAPI(date);
@@ -22,13 +48,16 @@ export const ReservationProvider = ({ children }) => {
       (t) => !reservationTimes.includes(t)
     );
 
-    setAvailableTimes(updatedAvailableTimes);
+    dispatch({
+      type: reservationActions.setAvailableTimes,
+      payload: updatedAvailableTimes,
+    });
   };
 
   const submitReservation = async (form) => {
     return new Promise(async (resolve, reject) => {
       try {
-        setIsSubmitting(true);
+        dispatch({ type: reservationActions.setIsSubmitting, payload: true });
         const result = await submitAPI(form);
         const reservations = reservationsMap[form.date] || [];
         const updatedReservations = [...reservations, form];
@@ -37,13 +66,16 @@ export const ReservationProvider = ({ children }) => {
           [form.date]: updatedReservations,
         };
 
-        setReservationsMap(updatedReservationsMap);
-        setAvailableTimes([]);
+        dispatch({
+          type: reservationActions.setReservationsMap,
+          payload: updatedReservationsMap,
+        });
+        dispatch({ type: reservationActions.setAvailableTimes, payload: [] });
 
-        setIsSubmitting(false);
+        dispatch({ type: reservationActions.setIsSubmitting, payload: false });
         resolve(result);
       } catch (error) {
-        setIsSubmitting(false);
+        dispatch({ type: reservationActions.setIsSubmitting, payload: false });
         reject(error);
       }
     });
