@@ -1,3 +1,6 @@
+## Figma Design
+https://www.figma.com/file/AWyU0upQzGBFn82YhWRu56/Little-Lemon-Front-End?type=design&t=hv1Ghax22wG9m6MM-6
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
