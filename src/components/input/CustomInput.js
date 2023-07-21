@@ -21,6 +21,7 @@ export const CustomInput = ({ name, type, placeholder, icon, onChange }) => {
               variant="filled"
               errorBorderColor="red.400"
               onChange={onChange || field.onChange}
+              aria-label={`${name}-label`}
             />
           )}
         </Field>

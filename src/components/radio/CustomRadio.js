@@ -8,7 +8,7 @@ const Radio = (props) => {
 
   return (
     <Box as="label">
-      <input {...input} />
+      <input {...input} aria-label={`${props.value.toLowerCase()}-label`} />
       <Box
         {...radio}
         cursor="pointer"

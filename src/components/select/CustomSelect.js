@@ -20,6 +20,7 @@ const CustomSelect = ({ name, options, placeholder, icon }) => {
               className="select"
               iconSize={100}
               errorBorderColor="red.400"
+              aria-label={`${name}-label`}
             >
               {options.map((option) => (
                 <option key={option} value={option}>

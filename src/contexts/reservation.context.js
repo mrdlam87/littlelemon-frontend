@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useEffect, useReducer } from "react";
 import { fetchAPI, submitAPI } from "../utils/reservations";
 import { getDateString } from "../utils/date";
 
@@ -10,7 +10,7 @@ const reservationActions = {
 
 const initialState = {
   availableTimes: [],
-  reservationsMap: {},
+  reservationsMap: JSON.parse(localStorage.getItem("reservationsMap")) || {},
   isSubmitting: false,
 };
 
@@ -40,8 +40,24 @@ export const ReservationProvider = ({ children }) => {
   const [{ availableTimes, reservationsMap, isSubmitting }, dispatch] =
     useReducer(reservationsReducer, initialState);
 
+  useEffect(() => {
+    const storedReservationsMap = localStorage.getItem("reservationsMap");
+    console.log(storedReservationsMap);
+    if (storedReservationsMap) {
+      dispatch({
+        type: reservationActions.setReservationsMap,
+        payload: JSON.parse(storedReservationsMap),
+      });
+    }
+  }, []);
+
+  useEffect(() => {
+    console.log(reservationsMap);
+    localStorage.setItem("reservationsMap", JSON.stringify(reservationsMap));
+  }, [reservationsMap]);
+
   const fetchAvailableTimes = (date) => {
-    const result = fetchAPI(date);
+    const result = fetchAPI(date) ?? [];
     const reservationTimes =
       reservationsMap[getDateString(date)]?.map((r) => r.time) ?? [];
     const updatedAvailableTimes = result.filter(

@@ -4,12 +4,12 @@ import ReservationForm from "./reservation-form/ReservationForm";
 import SuccessModal from "./success-modal/SuccessModal";
 
 const Reservations = () => {
-  const [isShow, setIsShow] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [successForm, setSuccessForm] = useState({});
 
   const onSuccess = (form) => {
     setSuccessForm(form);
-    setIsShow(true);
+    setIsOpen(true);
   };
 
   return (
@@ -23,7 +23,7 @@ const Reservations = () => {
           </div>
         </div>
       </div>
-      <SuccessModal isOpen={isShow} form={successForm} />
+      <SuccessModal isOpen={isOpen} form={successForm} />
     </>
   );
 };
