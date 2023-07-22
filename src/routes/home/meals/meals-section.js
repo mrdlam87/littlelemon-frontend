@@ -1,4 +1,4 @@
-import "./meals.scss";
+import "./meals-section.scss";
 import CustomButton from "../../../components/button/custom-button";
 import MealCard from "./meal-card/meal-card";
 import meals from "../../../data/meals.json";

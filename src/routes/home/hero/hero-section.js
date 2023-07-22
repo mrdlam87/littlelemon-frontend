@@ -1,4 +1,4 @@
-import "./hero.scss";
+import "./hero-section.scss";
 import CustomButton from "../../../components/button/custom-button";
 import { useNavigate } from "react-router-dom";
 

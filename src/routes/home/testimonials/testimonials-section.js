@@ -1,4 +1,4 @@
-import "./testimonials.scss";
+import "./testimonials-section.scss";
 import testimonials from "../../../data/testimonials.json";
 import TestimonialCard from "./testimonial-card/testimonial-card";
 
