@@ -1,5 +1,5 @@
-import "./header.component.scss";
-import Nav from "../nav/nav.component";
+import "./header.scss";
+import Nav from "../nav/nav";
 import logo from "../../assets/images/Logo.svg";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
 import { useState } from "react";
