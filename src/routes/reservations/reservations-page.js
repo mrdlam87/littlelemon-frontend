@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./reservations.scss";
+import "./reservations-page.scss";
 import ReservationForm from "./reservation-form/reservation-form";
 import SuccessModal from "./success-modal/success-modal";
 
