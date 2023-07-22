@@ -1,4 +1,4 @@
-import "./CustomToast.scss";
+import "./custom-toast.scss";
 import { Box } from "@chakra-ui/react";
 import {
   IoCheckmarkCircle,

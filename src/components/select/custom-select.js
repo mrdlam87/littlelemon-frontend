@@ -1,5 +1,5 @@
 import { ErrorMessage, Field } from "formik";
-import "./CustomSelect.scss";
+import "./custom-select.scss";
 import { InputGroup, InputLeftElement, Select } from "@chakra-ui/react";
 
 const CustomSelect = ({ name, options, placeholder, icon }) => {

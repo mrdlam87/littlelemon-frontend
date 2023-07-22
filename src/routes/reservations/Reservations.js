@@ -1,7 +1,7 @@
 import { useState } from "react";
-import "./Reservations.scss";
-import ReservationForm from "./reservation-form/ReservationForm";
-import SuccessModal from "./success-modal/SuccessModal";
+import "./reservations.scss";
+import ReservationForm from "./reservation-form/reservation-form";
+import SuccessModal from "./success-modal/success-modal";
 
 const Reservations = () => {
   const [isOpen, setIsOpen] = useState(false);

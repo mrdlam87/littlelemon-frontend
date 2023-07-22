@@ -1,5 +1,5 @@
 import { Spinner } from "@chakra-ui/react";
-import "./CustomButton.scss";
+import "./custom-button.scss";
 
 const CustomButton = ({
   children,

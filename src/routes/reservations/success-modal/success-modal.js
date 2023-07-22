@@ -1,4 +1,4 @@
-import "./SuccessModal.scss";
+import "./success-modal.scss";
 import {
   Box,
   Divider,
@@ -8,7 +8,7 @@ import {
   ModalOverlay,
 } from "@chakra-ui/react";
 import { IoCheckmarkCircle } from "react-icons/io5";
-import CustomButton from "../../../components/button/CustomButton";
+import CustomButton from "../../../components/button/custom-button";
 import { useNavigate } from "react-router-dom";
 
 const SuccessModal = ({ isOpen, form }) => {

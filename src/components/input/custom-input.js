@@ -1,5 +1,5 @@
 import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
-import "./CustomInput.scss";
+import "./custom-input.scss";
 import { ErrorMessage, Field } from "formik";
 
 export const CustomInput = ({ name, type, placeholder, icon, onChange }) => {

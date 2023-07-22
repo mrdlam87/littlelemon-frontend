@@ -1,4 +1,4 @@
-import "./MealCard.scss";
+import "./meal-card.scss";
 
 const MealCard = ({ meal }) => {
   const { imageUrl, title, price, description } = meal;

@@ -1,4 +1,4 @@
-import "./CustomRadio.scss";
+import "./custom-radio.scss";
 import { Box, ButtonGroup, useRadio, useRadioGroup } from "@chakra-ui/react";
 
 const Radio = (props) => {

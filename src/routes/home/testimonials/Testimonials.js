@@ -1,6 +1,6 @@
-import "./Testimonials.scss";
+import "./testimonials.scss";
 import testimonials from "../../../data/testimonials.json";
-import TestimonialCard from "./testimonial-card/TestimonialCard";
+import TestimonialCard from "./testimonial-card/testimonial-card";
 
 const Testimonials = () => {
   return (

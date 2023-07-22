@@ -1,4 +1,4 @@
-import "./TestimonialCard.scss";
+import "./testimonial-card.scss";
 import star from "../../../../assets/images/star.png";
 
 const TestimonialCard = ({ testimonial }) => {

@@ -1,6 +1,6 @@
-import "./Meals.scss";
-import CustomButton from "../../../components/button/CustomButton";
-import MealCard from "./meal-card/MealCard";
+import "./meals.scss";
+import CustomButton from "../../../components/button/custom-button";
+import MealCard from "./meal-card/meal-card";
 import meals from "../../../data/meals.json";
 
 const Meals = () => {

@@ -1,8 +1,8 @@
-import "./Home.scss";
-import About from "./about/About";
-import Hero from "./hero/Hero";
-import Meals from "./meals/Meals";
-import Testimonials from "./testimonials/Testimonials";
+import "./home.scss";
+import About from "./about/about";
+import Hero from "./hero/hero";
+import Meals from "./meals/meals";
+import Testimonials from "./testimonials/testimonials";
 
 const Home = () => {
   return (

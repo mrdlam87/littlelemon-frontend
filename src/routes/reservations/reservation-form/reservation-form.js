@@ -1,4 +1,4 @@
-import "./ReservationForm.scss";
+import "./reservation-form.scss";
 import { useContext } from "react";
 import { ReservationContext } from "../../../contexts/reservation.context";
 import { Formik } from "formik";
@@ -12,11 +12,11 @@ import {
   IoTime,
 } from "react-icons/io5";
 import { Divider, useToast } from "@chakra-ui/react";
-import { CustomInput } from "../../../components/input/CustomInput";
-import CustomButton from "../../../components/button/CustomButton";
-import CustomRadio from "../../../components/radio/CustomRadio";
-import CustomSelect from "../../../components/select/CustomSelect";
-import CustomToast from "../../../components/toast/CustomToast";
+import { CustomInput } from "../../../components/input/custom-input";
+import CustomButton from "../../../components/button/custom-button";
+import CustomRadio from "../../../components/radio/custom-radio";
+import CustomSelect from "../../../components/select/custom-select";
+import CustomToast from "../../../components/toast/custom-toast";
 import { validate } from "../../../utils/validation";
 
 const ReservationForm = ({ onSuccess }) => {

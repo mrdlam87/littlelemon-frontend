@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./routes/home/Home";
+import Home from "./routes/home/home";
 import Main from "./components/main/main";
-import Reservations from "../src/routes/reservations/Reservations";
+import Reservations from "../src/routes/reservations/reservations";
 
 function App() {
   return (
