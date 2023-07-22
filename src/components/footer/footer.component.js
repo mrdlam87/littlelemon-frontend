@@ -1,4 +1,4 @@
-import "./footer.scss";
+import "./footer.component.scss";
 import logo from "../../assets/images/Logo.png";
 import {
   IoLogoInstagram,

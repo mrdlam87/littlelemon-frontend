@@ -1,7 +1,7 @@
 import "./main.scss";
 import { Outlet } from "react-router-dom";
-import Footer from "../footer/footer";
-import Header from "../header/header";
+import Footer from "../footer/footer.component";
+import Header from "../header/header.component";
 
 const Main = () => {
   return (
