@@ -1,4 +1,4 @@
-import "./about.scss";
+import "./about-section.scss";
 import image1 from "../../../assets/images/Mario and Adrian b.jpg";
 import image2 from "../../../assets/images/restaurant.jpg";
 
