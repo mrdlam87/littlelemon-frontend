@@ -42,7 +42,6 @@ export const ReservationProvider = ({ children }) => {
 
   useEffect(() => {
     const storedReservationsMap = localStorage.getItem("reservationsMap");
-    console.log(storedReservationsMap);
     if (storedReservationsMap) {
       dispatch({
         type: reservationActions.setReservationsMap,
@@ -52,7 +51,6 @@ export const ReservationProvider = ({ children }) => {
   }, []);
 
   useEffect(() => {
-    console.log(reservationsMap);
     localStorage.setItem("reservationsMap", JSON.stringify(reservationsMap));
   }, [reservationsMap]);
 
